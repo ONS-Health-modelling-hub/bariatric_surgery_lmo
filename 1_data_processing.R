@@ -116,7 +116,7 @@ analytical_df <- processing_df %>% filter(prev_metab_surgery_flag == 0 & metabol
                                    filter(primary_obesity_flag == 1 & working_age_flag == 1 | secondary_obesity_flag == 1 & associated_cond_flag == 1 & working_age_flag == 1)
 
 #arrange by episode start date and select only the earliest to get index 
-analytical_df <- analytical_df %>% collect() %>% group_by(newnhsno_hes) %>% arrange(epistart_hes) %>% slice(1L)
+analytical_df <- analytical_df %>% collect() %>% group_by(newnhsno_hes) %>% arrange(epistart_hes) %>% slice(1L) #currently TBC whether this will use opdate_01 / opdate_02 (in line with which variable contains the metabolic surgery code) instead of epistart_hes 
 
 table_name <- "name_of_table"
 table_path <- "path_of_table"
