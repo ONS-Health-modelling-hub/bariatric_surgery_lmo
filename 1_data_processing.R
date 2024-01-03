@@ -46,8 +46,8 @@ post_2017_apc <- "pre2017_apc_data"
 
 #set path to git repo
 path_dir <- 'path_to_directory'
-bariatric_procedure_codes <- read.csv(paste0(path_dir, '/bariatric_icd_lookup.csv'))
-bariatric_diag_codes <- read.csv(paste0(path_dir, '/bariatric_opcs_lookup.csv'))
+bariatric_procedure_codes <- read.csv(paste0(path_dir, '/bariatric_opcs_lookup.csv'))
+bariatric_diag_codes <- read.csv(paste0(path_dir, '/bariatric_icd_lookup.csv'))
 associated_cond_codes <- read.csv(paste0(path_dir, '/bariatric_associated_cond_lookup.csv'))
 
 procedure_codes <- bariatric_procedure_codes[[2]]
